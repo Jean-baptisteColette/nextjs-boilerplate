@@ -46,10 +46,16 @@ const Home = () => {
               Loading...
             </Typography>
           ) : (
-            <Typography
-              variant={"inherit"}
-              display={"inline"}
-            >{`${data?.firstName} ${data?.lastName}`}</Typography>
+            <Typography variant={"inherit"} display={"inline"}>
+              {`${data?.firstName} ${data?.lastName}`}
+              <Box
+                sx={(theme) => ({
+                  backgroundColor: theme.palette.success.main,
+                  width: "20px",
+                  height: "20px",
+                })}
+              />
+            </Typography>
           )}
         </Typography>
       </Box>
