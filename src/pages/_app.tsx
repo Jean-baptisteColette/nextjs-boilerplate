@@ -6,12 +6,12 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
-import createEmotionCache from "../components/createEmotionCache";
+import createEmotionCache from "@components/createEmotionCache";
 import React, { useState } from "react";
 import Head from "next/head";
-import { AppPageProps } from "../common";
+import { AppPageProps } from "@common/definitions";
 import { appWithTranslation, useTranslation } from "next-i18next";
-import { LocalisedThemeProvider } from "../modules/localised-theme-provider";
+import { LocalisedThemeProvider } from "@modules/localised-theme-provider";
 
 function MyApp({ Component, pageProps }: AppPageProps) {
   // Query client is in a useState hook so that it can be re-hydrated

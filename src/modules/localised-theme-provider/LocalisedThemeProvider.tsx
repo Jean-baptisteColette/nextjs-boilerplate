@@ -5,7 +5,7 @@ import {
   ThemeProvider,
 } from "@mui/material/styles";
 import { useRouter } from "next/router";
-import theme from "../../components/theme";
+import theme from "@components/theme";
 import * as locales from "@mui/material/locale";
 
 export type LocalisedThemeProviderProps = PropsWithChildren<{}>;

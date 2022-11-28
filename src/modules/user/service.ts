@@ -1,5 +1,5 @@
 import { User } from "./definitions";
-import { server } from "../../config";
+import { server } from "@config";
 
 export async function getUser(): Promise<User> {
   const response = await fetch(`${server}/api/data`, {

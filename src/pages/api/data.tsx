@@ -1,5 +1,5 @@
-import { asController } from "../../backend/middlewares";
-import { User } from "../../modules/user/definitions";
+import { asController } from "@backend/middlewares";
+import { User } from "@modules/user/definitions";
 
 export const createDataController = () => ({
   GET: async (): Promise<User> => {

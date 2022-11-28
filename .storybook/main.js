@@ -1,5 +1,6 @@
 const path = require("path");
 const toPath = (filePath) => path.join(process.cwd(), filePath);
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
   stories: [
@@ -19,6 +20,12 @@ module.exports = {
         fs: "empty",
       };
     }
+    config.resolve.plugins = [
+      ...(config.resolve.plugins || []),
+      new TsconfigPathsPlugin({
+        extensions: config.resolve.extensions,
+      }),
+    ];
     return {
       ...config,
       resolve: {
