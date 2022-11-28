@@ -2,7 +2,6 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   extends: "next/core-web-vitals",
   plugins: ["unused-imports", "@typescript-eslint"],
-  ignorePatterns: ["mockServiceWorker.js"],
   rules: {
     "unused-imports/no-unused-imports-ts": 2,
     "no-restricted-imports": [
