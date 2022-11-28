@@ -1,6 +1,6 @@
 # Next.js Boilerplate
 
-🚀 Boilerplate and Starter for Next.js, Muiv5, Storybook, i18n and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library.
+🚀 Boilerplate and Starter for Next.js, Muiv5, TanStack Query, Storybook, i18n and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library.
 
 ## Getting Started
 
