@@ -14,18 +14,16 @@ module.exports = {
     "storybook-addon-next-router",
     "storybook-react-i18next",
   ],
+  core: {
+    builder: "webpack5",
+  },
   webpackFinal: async (config, { isServer }) => {
     if (!isServer) {
-      config.node = {
-        fs: "empty",
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
       };
     }
-    config.resolve.plugins = [
-      ...(config.resolve.plugins || []),
-      new TsconfigPathsPlugin({
-        extensions: config.resolve.extensions,
-      }),
-    ];
     return {
       ...config,
       resolve: {
@@ -35,6 +33,7 @@ module.exports = {
           "@emotion/core": toPath("node_modules/@emotion/react"),
           "emotion-theming": toPath("node_modules/@emotion/react"),
         },
+        plugins: [new TsconfigPathsPlugin()],
       },
     };
   },
