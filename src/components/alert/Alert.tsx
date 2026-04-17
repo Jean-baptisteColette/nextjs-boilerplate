@@ -5,111 +5,52 @@ import { AlertProps } from "./definitions";
 import Typography from "@mui/material/Typography";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-export const Alert: FC<AlertProps> = (props) => {
-  const {
-    headerText,
-    descriptionText,
-    color,
-    iconName,
-    isLoading,
-    sx,
-    ...rest
-  } = props;
+/**
+ * Returns the three repeated MuiAlert sub-selector overrides for a given color.
+ * This avoids duplicating the same three lines across every color variant.
+ */
+const getAlertSubSelectorSx = (color: string) => ({
+  ".MuiAlert-action": { color: `${color}.dark` },
+  ".MuiAlert-icon": { color: `${color}.main` },
+  ".MuiAlert-message": { color: `${color}.dark` },
+});
 
+export const Alert: FC<AlertProps> = ({
+  headerText,
+  descriptionText,
+  color,
+  iconName,
+  isLoading,
+  sx = {},
+  variant = "standard",
+  elevation = 0,
+  ...rest
+}: AlertProps) => {
   if (isLoading) {
     return <Skeleton variant="rectangular" height="80px" />;
   }
 
+  // Build the variant-specific selector only when a color is provided.
+  // This replaces six nearly-identical hardcoded blocks.
+  const colorStr = color as string | undefined;
+  const variantSelectorSx = colorStr
+    ? {
+        [`&.MuiAlert-${variant}${colorStr
+          .charAt(0)
+          .toUpperCase()}${colorStr.slice(1)}`]: {
+          ...getAlertSubSelectorSx(colorStr),
+        },
+      }
+    : {};
+
   return (
     <MuiAlert
       color={color}
-      icon={
-        iconName ? (
-          <FontAwesomeSvgIcon icon={iconName} />
-        ) : (
-          <FontAwesomeSvgIcon icon={faCheck} />
-        )
-      }
+      variant={variant}
+      elevation={elevation}
+      icon={<FontAwesomeSvgIcon icon={iconName ?? faCheck} />}
       sx={{
-        "&.MuiAlert-standardSuccess": {
-          color: (theme) => theme.palette.success.dark,
-          backgroundColor: (theme) => theme.palette.success.light,
-          ".MuiAlert-action": {
-            color: `${color}.dark`,
-          },
-          ".MuiAlert-icon": {
-            color: `${color}.main`,
-          },
-          ".MuiAlert-message": {
-            color: `${color}.dark`,
-          },
-        },
-        "&.MuiAlert-standardPrimary": {
-          color: (theme) => theme.palette.primary.dark,
-          backgroundColor: (theme) => theme.palette.primary.light,
-          ".MuiAlert-action": {
-            color: `${color}.dark`,
-          },
-          ".MuiAlert-icon": {
-            color: `${color}.main`,
-          },
-          ".MuiAlert-message": {
-            color: `${color}.dark`,
-          },
-        },
-        "&.MuiAlert-standardSecondary": {
-          color: (theme) => theme.palette.primary.dark,
-          backgroundColor: (theme) => theme.palette.grey[50],
-          ".MuiAlert-action": {
-            color: `primary.dark`,
-          },
-          ".MuiAlert-icon": {
-            color: `primary.main`,
-          },
-          ".MuiAlert-message": {
-            color: `primary.dark`,
-          },
-        },
-        "&.MuiAlert-standardError": {
-          color: (theme) => theme.palette.error.dark,
-          backgroundColor: (theme) => theme.palette.error.light,
-          ".MuiAlert-action": {
-            color: `${color}.dark`,
-          },
-          ".MuiAlert-icon": {
-            color: `${color}.main`,
-          },
-          ".MuiAlert-message": {
-            color: `${color}.dark`,
-          },
-        },
-        "&.MuiAlert-standardWarning": {
-          color: (theme) => theme.palette.warning.dark,
-          backgroundColor: (theme) => theme.palette.warning.light,
-          ".MuiAlert-action": {
-            color: `${color}.dark`,
-          },
-          ".MuiAlert-icon": {
-            color: `${color}.main`,
-          },
-          ".MuiAlert-message": {
-            color: `${color}.dark`,
-          },
-        },
-        "&.MuiAlert-standardInfo": {
-          color: (theme) => theme.palette.info.dark,
-          backgroundColor: (theme) => theme.palette.info.light,
-          ".MuiAlert-action": {
-            color: `${color}.dark`,
-          },
-          ".MuiAlert-icon": {
-            color: `${color}.main`,
-          },
-          ".MuiAlert-message": {
-            color: `${color}.dark`,
-          },
-        },
-
+        ...variantSelectorSx,
         ...sx,
       }}
       {...rest}
@@ -122,10 +63,4 @@ export const Alert: FC<AlertProps> = (props) => {
       )}
     </MuiAlert>
   );
-};
-
-Alert.defaultProps = {
-  variant: "standard",
-  elevation: 0,
-  sx: {},
 };
