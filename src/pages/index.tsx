@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetServerSidePropsContext } from "next";
-import { QueryClient } from "@tanstack/react-query";
+import { dehydrate, QueryClient } from "@tanstack/react-query";
 import { getUser } from "@modules/user/service";
 import PageLayout from "@modules/page-layout/components/PageLayout/PageLayout";
 import HomePage from "@modules/home/HomePage";
@@ -14,6 +14,7 @@ export const getServerSideProps = async ({
 
   return {
     props: {
+      dehydratedState: dehydrate(queryClient),
       ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
