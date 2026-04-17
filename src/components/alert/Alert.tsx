@@ -1,1 +1,66 @@
-aW1wb3J0IHsgQWxlcnQgYXMgTXVpQWxlcnQsIEFsZXJ0VGl0bGUsIFNrZWxldG9uIH0gZnJvbSAiQG11aS9tYXRlcmlhbCI7CmltcG9ydCB7IEZDIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBGb250QXdlc29tZVN2Z0ljb24gfSBmcm9tICJAY29tcG9uZW50cy9pY29ucy9Gb250QXdlc29tZVN2Z0ljb24iOwppbXBvcnQgeyBBbGVydFByb3BzIH0gZnJvbSAiLi9kZWZpbml0aW9ucyI7CmltcG9ydCBUeXBvZ3JhcGh5IGZyb20gIkBtdWkvbWF0ZXJpYWwvVHlwb2dyYXBoeSI7CmltcG9ydCB7IGZhQ2hlY2sgfSBmcm9tICJAZm9ydGF3ZXNvbWUvZnJlZS1zb2xpZC1zdmctaWNvbnMiOwoKLyoqCiAqIFJldHVybnMgdGhlIHRocmVlIHJlcGVhdGVkIE11aUFsZXJ0IHN1Yi1zZWxlY3RvciBvdmVycmlkZXMgZm9yIGEgZ2l2ZW4gY29sb3IuCiAqIFRoaXMgYXZvaWRzIGR1cGxpY2F0aW5nIHRoZSBzYW1lIHRocmVlIGxpbmVzIGFjcm9zcyBldmVyeSBjb2xvciB2YXJpYW50LgogKi8KY29uc3QgZ2V0QWxlcnRTdWJTZWxlY3RvclN4ID0gKGNvbG9yOiBzdHJpbmcpID0+ICh7CiAgIi5NdWlBbGVydC1hY3Rpb24iOiB7IGNvbG9yOiBgJHtjb2xvcn0uZGFya2AgfSwKICAiLk11aUFsZXJ0LWljb24iOiB7IGNvbG9yOiBgJHtjb2xvcn0ubWFpbmAgfSwKICAiLk11aUFsZXJ0LW1lc3NhZ2UiOiB7IGNvbG9yOiBgJHtjb2xvcn0uZGFya2AgfSwKfSk7CgpleHBvcnQgY29uc3QgQWxlcnQ6IEZDPEFsZXJ0UHJvcHM+ID0gKHsKICBoZWFkZXJUZXh0LAogIGRlc2NyaXB0aW9uVGV4dCwKICBjb2xvciwKICBpY29uTmFtZSwKICBpc0xvYWRpbmcsCiAgc3ggPSB7fSwKICB2YXJpYW50ID0gInN0YW5kYXJkIiwKICBlbGV2YXRpb24gPSAwLAogIC4uLnJlc3QKfTogQWxlcnRQcm9wcykgPT4gewogIGlmIChpc0xvYWRpbmcpIHsKICAgIHJldHVybiA8U2tlbGV0b24gdmFyaWFudD0icmVjdGFuZ3VsYXIiIGhlaWdodD0iODBweCIgLz47CiAgfQoKICAvLyBCdWlsZCB0aGUgdmFyaWFudC1zcGVjaWZpYyBzZWxlY3RvciBvbmx5IHdoZW4gYSBjb2xvciBpcyBwcm92aWRlZC4KICAvLyBUaGlzIHJlcGxhY2VzIHNpeCBuZWFybHktaWRlbnRpY2FsIGhhcmRjb2RlZCBibG9ja3MuCiAgY29uc3QgY29sb3JTdHIgPSBjb2xvciBhcyBzdHJpbmcgfCB1bmRlZmluZWQ7CiAgY29uc3QgdmFyaWFudFNlbGVjdG9yU3ggPSBjb2xvclN0cgogICAgPyB7CiAgICAgICAgW2AmLk11aUFsZXJ0LSR7dmFyaWFudH0ke2NvbG9yU3RyCiAgICAgICAgICAuY2hhckF0KDApCiAgICAgICAgICAudG9VcHBlckNhc2UoKX0ke2NvbG9yU3RyLnNsaWNlKDEpfWBdOiB7CiAgICAgICAgICAuLi5nZXRBbGVydFN1YlNlbGVjdG9yU3goY29sb3JTdHIpLAogICAgICAgIH0sCiAgICAgIH0KICAgIDoge307CgogIHJldHVybiAoCiAgICA8TXVpQWxlcnQKICAgICAgY29sb3I9e2NvbG9yfQogICAgICB2YXJpYW50PXt2YXJpYW50fQogICAgICBlbGV2YXRpb249e2VsZXZhdGlvbn0KICAgICAgaWNvbj17PEZvbnRBd2Vzb21lU3ZnSWNvbiBpY29uPXtpY29uTmFtZSA/PyBmYUNoZWNrfSAvPn0KICAgICAgc3g9e3sKICAgICAgICAuLi52YXJpYW50U2VsZWN0b3JTeCwKICAgICAgICAuLi5zeCwKICAgICAgfX0KICAgICAgey4uLnJlc3R9CiAgICA+CiAgICAgIHtoZWFkZXJUZXh0ICYmICgKICAgICAgICA8QWxlcnRUaXRsZSBzeD17eyB0eXBvZ3JhcGh5OiAiaDYiIH19PntoZWFkZXJUZXh0fTwvQWxlcnRUaXRsZT4KICAgICAgKX0KICAgICAge0Jvb2xlYW4oZGVzY3JpcHRpb25UZXh0KSAmJiAoCiAgICAgICAgPFR5cG9ncmFwaHkgdmFyaWFudD17ImJvZHkzIn0+e2Rlc2NyaXB0aW9uVGV4dH08L1R5cG9ncmFwaHk+CiAgICAgICl9CiAgICA8L011aUFsZXJ0PgogICk7Cn07Cg==
+import { Alert as MuiAlert, AlertTitle, Skeleton } from "@mui/material";
+import { FC } from "react";
+import { FontAwesomeSvgIcon } from "@components/icons/FontAwesomeSvgIcon";
+import { AlertProps } from "./definitions";
+import Typography from "@mui/material/Typography";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
+/**
+ * Returns the three repeated MuiAlert sub-selector overrides for a given color.
+ * This avoids duplicating the same three lines across every color variant.
+ */
+const getAlertSubSelectorSx = (color: string) => ({
+  ".MuiAlert-action": { color: `${color}.dark` },
+  ".MuiAlert-icon": { color: `${color}.main` },
+  ".MuiAlert-message": { color: `${color}.dark` },
+});
+
+export const Alert: FC<AlertProps> = ({
+  headerText,
+  descriptionText,
+  color,
+  iconName,
+  isLoading,
+  sx = {},
+  variant = "standard",
+  elevation = 0,
+  ...rest
+}: AlertProps) => {
+  if (isLoading) {
+    return <Skeleton variant="rectangular" height="80px" />;
+  }
+
+  // Build the variant-specific selector only when a color is provided.
+  // This replaces six nearly-identical hardcoded blocks.
+  const colorStr = color as string | undefined;
+  const variantSelectorSx = colorStr
+    ? {
+        [`&.MuiAlert-${variant}${colorStr
+          .charAt(0)
+          .toUpperCase()}${colorStr.slice(1)}`]: {
+          ...getAlertSubSelectorSx(colorStr),
+        },
+      }
+    : {};
+
+  return (
+    <MuiAlert
+      color={color}
+      variant={variant}
+      elevation={elevation}
+      icon={<FontAwesomeSvgIcon icon={iconName ?? faCheck} />}
+      sx={{
+        ...variantSelectorSx,
+        ...sx,
+      }}
+      {...rest}
+    >
+      {headerText && (
+        <AlertTitle sx={{ typography: "h6" }}>{headerText}</AlertTitle>
+      )}
+      {Boolean(descriptionText) && (
+        <Typography variant={"body3"}>{descriptionText}</Typography>
+      )}
+    </MuiAlert>
+  );
+};
